@@ -1,0 +1,51 @@
+#include<iostream>
+using namespace std;
+class printer
+{
+    int id=101;
+    public:
+    void display()
+    {
+        cout<<"ID "<<id<<"\t";
+        cout<<"Black and white ink"<<endl;
+    }
+};
+class inkz:virtual public printer
+{
+    int id=102;
+    public:
+    void display()
+    {
+        cout<<"ID "<<id<<"\t";
+        cout<<"Inkz printer"<<endl;
+    }
+};
+class Laser:virtual public printer
+{
+    int id=103;
+    public:
+    void display()
+    {
+        cout<<"ID "<<id<<"\t";
+        cout<<"Laser printer"<<endl;
+    }
+};
+class thermal:public inkz,public Laser
+{
+    int id=104;
+    public:
+    void display()
+    {
+        printer::display();
+        inkz::display();
+        Laser::display();
+        cout<<"ID "<<id<<"\t";
+        cout<<"Thermal printer ";
+    }
+};
+int main()
+{
+    thermal t1;
+    t1.display();
+    return 0;
+}

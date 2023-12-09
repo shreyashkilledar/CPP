@@ -1,0 +1,42 @@
+#include<iostream>
+using namespace std;
+class Date
+{
+    int dd,mm,yy;
+    public:
+    Date(int d,int m,int y)
+    {
+        dd=d;
+        mm=m;
+        yy=y;
+    }
+    friend void operator-(Date&,int);
+    friend void operator+(Date&,int);
+    void display()
+    {
+        cout<<dd<<"/"<<mm<<"/"<<yy<<endl;
+    }
+};
+void operator-(Date&d,int x)
+{
+    d.dd=d.dd-x;
+    d.mm=d.mm-5;
+    d.yy=d.yy-3;
+    cout<<d.dd<<"/"<<d.mm<<"/"<<d.yy<<endl;
+};
+void operator+(Date&d,int x)
+{
+    d.dd=d.dd+x;
+    d.mm=d.mm+7;
+    d.yy=d.yy+1;
+    cout<<d.dd<<"/"<<d.mm<<"/"<<d.yy<<endl;
+};
+int main()
+{
+    int dd,mm,yy;
+    cout<<"Enter the date="<<endl;
+    cin>>dd>>mm>>yy;
+    Date d(dd,mm,yy);
+    d-5;
+    d+7;
+}
