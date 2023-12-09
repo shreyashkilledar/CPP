@@ -1,0 +1,26 @@
+#include<iostream>
+using namespace std;
+class Date
+{
+    int dd,mm,yyyy;
+    public:
+    void getdata()
+    {
+        cout<<"Enter the Date: ";
+        cin>>dd;
+        cout<<"Enter the month: ";
+        cin>>mm;
+        cout<<"Enter the Year: ";
+        cin>>yyyy;
+    }
+    void display()
+    {
+        cout<<"The date is "<<dd<<"/"<<mm<<"/"<<yyyy<<".";
+    }
+};
+int main()
+{
+    Date d;
+    d.getdata();
+    d.display();
+}

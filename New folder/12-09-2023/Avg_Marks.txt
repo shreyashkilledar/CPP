@@ -1,0 +1,20 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int m1,m2,m3,m4,m5,sum;
+    float avg;
+    cout<<"Enter the m1:";
+    cin>>m1;
+    cout<<"Enter the m2:";
+    cin>>m2;
+    cout<<"Enter the m3:";
+    cin>>m3;
+    cout<<"Enter the m4:";
+    cin>>m4;
+    cout<<"Enter the m5:";
+    cin>>m5;
+    sum=(m1+m2+m3+m4+m5);
+    avg= sum/5.0;
+    cout<<"Average Marks of the studnet is"<<avg<<"%";
+}
